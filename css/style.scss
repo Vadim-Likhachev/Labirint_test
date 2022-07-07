@@ -1,0 +1,856 @@
+@import url("/assets/fonts/PTRootUI/stylesheet.css");
+
+@import "breakpoints";
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+h1, h2, h3, h4 {
+    font-family: 'PT Root UI';
+    font-style: normal;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-family: 'PT Root UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+}
+
+a, button {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a {
+    color: #065CC2;
+    font-family: 'PT Root UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+}
+
+body {
+  background-color: #F2F2F2;
+  height: 100%;
+}
+
+.order_summury_popup {
+    display: none;
+}
+
+.page {
+    max-width: 1743px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    min-height: 100%;
+
+    min-height: 100vh;
+
+} 
+
+.header {
+    padding: 48px 0 19px 43px;
+
+    &_title {
+        font-size: 35px;
+        line-height: 44px;
+    }
+}
+
+.main {
+    padding: 0px 77px 51px 43px;
+    border: 1px solid #C5C5C5;
+    background: #FFFFFF;
+    display: flex;
+    margin-bottom: 123px;
+
+    flex-grow: 1;
+
+    &_border {
+        width: 1px;
+        max-height: 900px;
+        background: linear-gradient(0deg, #8C8C8C, #8C8C8C), linear-gradient(180deg, #FF8905 0%, rgba(255, 137, 5, 0) 100%), #FF4800;
+    }
+
+    &_title {
+        font-size: 29px;
+        line-height: 37px;
+    }
+}
+
+.delivery {
+    max-width: 1118px;
+    padding-right: 82px;
+    margin-top: 40px;
+
+    &_carousel {
+        display: flex;
+        flex-direction: column;
+
+        &_title {
+            display: flex;
+            justify-content: space-between; 
+            max-width: 100%;
+
+            &_button {
+                display: flex;
+            }
+        }
+
+        &_new {
+            margin-top: 14px;
+        }
+    }
+}
+
+.carousel-button {
+    width: 40px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #D6D6D6;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.delivery_carousel_button_back {
+    margin-right: 4px;
+    background-image: url(../assets/svg/VectorBack.svg);
+    opacity: 0.25;
+}
+
+.delivery_carousel_button_forward {
+    margin-right: 4px;
+    background-image: url(../assets/svg/Vector.svg);
+}
+
+.delivery_carousel_adresses {
+    display: flex;
+    margin-top: 14px;
+}
+
+
+
+.delivery_carousel_adress {
+
+    width: 489px;
+    border: 2px solid  #D6D6D6;
+    border-radius: 4px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 14px;
+
+    &:nth-child(3) {
+        display: none;
+    }
+
+    &_info {
+        max-width: 360px;
+
+        &_title {
+            font-size: 22px;
+            line-height: 28px;
+        }
+    }
+
+    &_price {
+        &_mobile {
+            display: none;
+        }
+    }
+}
+
+.active-adress {
+    border-color: #065CC2;
+}
+
+.delivery_timing {
+    margin-top: 30px;
+    width: 840px;
+
+    &_when {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &_data {
+            width: 292px;
+            padding: 20px;
+            border: 2px solid #065CC2;
+            margin-right: 14px;
+
+            &:nth-child(2) {
+                border-color: #D6D6D6;
+                margin-right: 30px;
+            }
+
+            &_title {
+                &_desktop {
+                    font-size: 22px;
+                    line-height: 28px;
+                }
+
+                &_mobile {
+                    display: none;
+                }
+
+            }
+        }
+    }
+
+    &_checkbox {
+        margin-top: 14px;
+
+        &_opacity {
+            opacity: 0.25;
+        }
+
+        input {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+    }
+}
+
+.delivery_recipient{
+    margin-top: 36px;
+    max-width: 873px;
+
+    &_mobile {
+        display: none;
+    }
+
+    &_container {
+        display: flex;
+
+        &_data {
+
+            &:first-child {
+                margin-right: 14px;
+            }
+        }
+    }
+
+    label {
+        font-family: 'PT Root UI';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 21px;
+    }
+
+    select {
+        font-family: 'PT Root UI';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 28px;
+        padding-right: 44px;
+        outline: none;
+
+        border: none;
+
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url("/assets/svg/arrow.alt.down.svg");
+        background-repeat: no-repeat;
+        background-position: 100% 0%;
+        background-size: 24px;
+
+    }
+
+    &_data {
+        padding: 12px 14px;
+        border: 1px solid #D6D6D6;
+        border-radius: 4px;
+        max-width: 572px;
+        margin-top: 8px;
+        margin-bottom: 14px;
+
+        &_label {
+            display: flex;
+            flex-direction: column;
+
+
+        }
+    }
+}
+
+.basket {
+    margin-top: 40px;
+    margin-left: 50px;
+
+    span {
+        font-weight: 400;
+        margin-left: 4px;
+    }
+
+    &_info {
+        width: 400px;
+
+        &_summury {
+            display: none;
+        }
+
+        &_list {
+            list-style-type: none;
+            border-bottom: 1px solid #D6D6D6;
+            margin-top: 30px;
+
+            &_item {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 14px;
+
+
+                &_number {
+                    font-family: 'PT Root UI';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 22px;
+                    line-height: 28px;
+                }
+            }
+        }
+    }
+
+    &_close {
+        display: none;
+    }
+}
+
+.footer {
+    background: #F8F8F8;
+    display: block;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    
+
+    &_container {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1743px;
+        padding: 20px 75px 20px 52px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &_mobile {
+            display: none;
+        }
+        
+        button {
+            background: linear-gradient(0deg, #EC0002, #EC0002), linear-gradient(91.91deg, rgba(208, 38, 38, 0) 0%, #D02626 99.65%), #FF0000;
+            border: 1px solid #E01D1D;
+            border-radius: 4px;
+            padding: 22px 50px;
+
+
+            font-family: 'PT Root UI';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 29px;
+            line-height: 37px;
+
+            color: #FFFFFF;
+        }
+
+        &_sum_desktop {
+            width: 489px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &_cost {
+                font-family: 'PT Root UI';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 35px;
+                line-height: 44px;
+                color: #333333;
+            }
+        }
+    }
+}
+
+@include for-phone-only {
+
+    a {
+        font-size: 17px;
+        line-height: 21px;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .page {
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    } 
+
+    .header {
+        padding: 40px 0 16px 16px;
+    
+        &_title {
+            font-size: 27px;
+            line-height: 32px;
+        }
+    }
+
+    .main {
+        background: #FFFFFF;
+        border: none;
+        flex-grow: 1;
+        padding: 24px 16px 32px 16px;
+        overflow: hidden;
+    
+        &_title {
+            font-size: 21px;
+            line-height: 26px;
+        }
+    }
+
+    .delivery {
+        margin-top: 0;
+        
+        &_carousel {
+            display: block;
+    
+            &_title {
+                display: block;
+    
+                &_button {
+                    display: none;
+                }
+            }
+    
+            &_new {
+                margin-top: 12px;
+            }
+        }
+  }
+
+  .delivery_carousel_adresses {
+    display: flex;
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+
+
+.delivery_carousel_adress{
+    width: 300px;
+    display: block;
+    border: 2px solid #065CC2;
+    padding:  16px 20px 0 20px;
+
+
+
+    &:first-child {
+        margin-right: 14px;
+        border: 2px solid #065CC2;
+    }
+
+    &:nth-child(2) {
+        border-color: #D6D6D6;
+    }
+
+    &_info {
+        max-width: 360px;
+
+        &_title {
+            font-size: 17px;
+            line-height: 21px;
+        }
+    }
+
+    &_price {
+        display: none;
+
+        &_desktop {
+            display: none;
+        }
+
+        &_mobile {
+            display: block;
+
+            font-size: 17px;
+            line-height: 21px;
+        }
+    }
+}
+
+.delivery_timing {
+    margin-top: 24px;
+    margin-right: 0;
+    width: 100%;
+
+    &_when {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+
+        &_data {
+            width: 138px;
+            padding: 16px 20px;
+            border: 2px solid #065CC2;
+            margin-right: 14px;
+            margin-bottom: 12px;
+
+            &_desktop {
+                display: none;
+            }
+
+            &_mobile {
+                display: block;
+            }
+
+            a {
+                width: 400px;
+            }
+
+            &:nth-child(2) {
+                border-color: #D6D6D6;
+                margin-right: 30px;
+            }
+
+            &_title {
+                font-size: 22px;
+                line-height: 28px;
+                font-size: 17px;
+                line-height: 21px;
+
+                &_desktop {
+                    display: none;
+                }
+    
+                &_mobile {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &_checkbox {
+        margin-top: 24px;
+
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        
+        p {
+            margin-top: 34px;
+            display: flex;
+            font-size: 17px;
+            line-height: 21px;
+            max-width: 328px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
+        &_opacity {
+            opacity: 0.25;
+        }
+
+        input {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+    }
+}
+
+.delivery_recipient{
+    margin-top: 32px;
+    width: 328px;
+
+    &_mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &_title_desktop {
+        display: none;
+    }
+
+    &_container {
+        display: flex;
+        flex-direction: column;
+
+        &_data {
+
+
+            &_desktop {
+                display: none;
+            }
+
+            &_mobile {
+                display: flex;
+                align-items: center;
+
+                a {
+                    margin-left: 16px;
+                }
+            }
+
+
+
+            &:first-child {
+                margin-right: 0px;
+            }
+        }
+    }
+
+    label {
+        font-family: 'PT Root UI';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 21px;
+    }
+
+    select {
+        font-family: 'PT Root UI';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 20px;
+        padding-right: 44px;
+
+        border: none;
+
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url("/assets/svg/arrow.alt.down.svg");
+        background-repeat: no-repeat;
+        background-position: 100% 0;
+        background-size: 24px;
+
+    }
+
+    &_data {
+        padding: 12px 14px;
+        border: 1px solid #D6D6D6;
+        margin-top: 8px;
+        margin-bottom: 0;
+
+
+        &:nth-child(2) {
+            width: 210px;
+        }
+
+
+
+        &_label {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+.basket-mobile {
+    display: none;
+}
+
+.order_summury_popup {
+    position: absolute;
+    z-index: 9999;
+    background: #FFFFFF;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 40px 16px 0 16px;
+
+    p {
+        font-size: 17px;
+        line-height: 21px;
+    }
+
+    span {
+        font-weight: 400;
+        margin-left: 4px;
+    }
+
+    &_info {
+        width: 100%;
+
+        &_summury {
+            display: block;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 21px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #D6D6D6;
+        }
+
+        &_list {
+            list-style-type: none;
+            border-bottom: 1px solid #D6D6D6;
+            margin-top: 20px;
+
+            &_item {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 14px;
+
+                &_number {
+                    font-family: 'PT Root UI';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 17px;
+                    line-height: 21px;
+                }
+            }
+        }
+    }
+
+    &_close {
+        text-align: center;
+        padding: 16px;
+        width: 100%;
+        display: block;
+        left: 0;
+        bottom: 0;
+        position: fixed;
+
+        background: #F8F8F8;
+
+        &_button {
+            font-family: 'PT Root UI';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 21px;
+
+            background: #FFFFFF;
+            border: 1px solid #D6D6D6;
+            box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.12), 0px 3px 1px rgba(0, 0, 0, 0.04), 0px 2px 0px rgba(149, 135, 128, 0.4);
+            border-radius: 4px;
+            
+            padding: 16px 20px;
+            width: 100%;
+        
+        }
+
+    }
+}
+
+
+
+.footer {
+    background: #F8F8F8;
+    display: block;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    
+
+    &_container {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1743px;
+        display: block;
+        padding: 16px;
+
+        &_desktop {
+            display: none;
+        }
+
+
+        &_mobile {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &_more-button {
+                font-size: 14px;
+                line-height: 18px;
+            }
+
+            p {
+                font-family: 'PT Root UI';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 18px;
+            }
+
+        }
+        
+        button {
+            background: linear-gradient(0deg, #EC0002, #EC0002), linear-gradient(91.91deg, rgba(208, 38, 38, 0) 0%, #D02626 99.65%), #FF0000;
+            border: 1px solid #E01D1D;
+            border-radius: 4px;
+            padding: 16px 20px;
+            width: 100%;
+            margin-top: 16px;
+
+
+            font-family: 'PT Root UI';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 17px;
+            line-height: 21px;
+
+            color: #FFFFFF;
+        }
+
+        &_sum {
+            width: 489px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &_cost {
+                margin-left: 4px;
+            }
+
+            &_desktop {
+                display: none;
+            }
+
+            &_mobile {
+                display: flex;
+            }
+        }
+    }
+}
+
+
+}
+

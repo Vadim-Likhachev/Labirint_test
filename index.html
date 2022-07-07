@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Оформление заказа</title>
+</head>
+<body>
+    <form class="page">
+        <header class="header">
+            <h1 class="header_title">Оформление заказа</h1>
+        </header>
+
+        <main class="main">
+            <div class="delivery">
+    
+                <div class="delivery_carousel">
+                    <div class="delivery_carousel_title">
+                        <h2 class="main_title">Доставка</h2>
+                        <div class="delivery_carousel_title_button">
+                             <button class="delivery_carousel_button_back carousel-button"></button>
+                             <button class="delivery_carousel_button_forward carousel-button"></button>
+                         </div>
+                    </div>
+
+                    <div class="delivery_carousel_adresses">
+                        <article class="delivery_carousel_adress active-adress">
+                            <div class="delivery_carousel_adress_info">
+                                <h3 class="delivery_carousel_adress_info_title">Лабиринт, курьер — 25 сент.</h3> 
+                                <p class="delivery_carousel_adress_price_mobile">+200 ₽</p>
+                                <p>ул. Алексея Алексеева, 194 Б, Москва, 123456</p>
+                            </div>
+                            <p class="delivery_carousel_adress_price_desktop">+200 ₽</p>
+                        </article>
+                        <article class="delivery_carousel_adress">
+                            <div class="delivery_carousel_adress_info">
+                                <h3 class="delivery_carousel_adress_info_title">Почта России, курьер — 24-26 сент.</h3> 
+                                <p class="delivery_carousel_adress_price_mobile">+367 ₽</p>
+                                <p>ул. Академика Королева, 73/3, Петропавловск- Камчатский, 683000</p>
+                            </div>
+                            <p class="delivery_carousel_adress_price_desktop">+367 ₽</p>
+                        </article>
+                        <article class="delivery_carousel_adress">
+                            <div class="delivery_carousel_adress_info">
+                                <h3 class="delivery_carousel_adress_info_title">Лабиринт, курьер — 25 сент.</h3>
+                                <p class="delivery_carousel_adress_price_mobile">0 ₽</p>
+                                <p>Можайское шоссе, д. 21, кв. 50, Москва, 121471</p>
+                            </div>
+                            <p class="delivery_carousel_adress_price_desktop">0 ₽</p>
+                        </article>
+                    </div>
+
+                    <a class="delivery_carousel_new" href="#0">Выбрать новое место и способ</a>
+                </div>
+
+                <div class="delivery_timing">
+                    <div class="delivery_timing_when">
+                        <article class="delivery_timing_when_data">
+                            <h3 class="delivery_timing_when_data_title">вт, 25 сен</h3>
+                            <p> 10:00–19:00</p>
+                        </article>
+                        <article class="delivery_timing_when_data">
+                            <h3 class="delivery_timing_when_data_title">ср, 26 сен</h3>
+                            <p> 10:00–19:00</p>
+                        </article>
+                        <a class="delivery_timing_when_data_desktop" href="#0">Другие дата и время</a>
+                    </div>
+                    <a class="delivery_timing_when_data_mobile" href="#0">Другие дата и время</a>
+                    <div class="delivery_timing_checkbox">
+                        <p><input type="checkbox" checked> Viber/СМС уведомления о статусе заказа</p>
+                        <p><input class="delivery_timing_checkbox_opacity" type="checkbox" checked> Оставить у двери (бесконтактная доставка)</p>
+                    </div>
+                </div>
+
+                <div class="delivery_recipient">
+                    <div class="delivery_recipient_mobile">
+                        <h2 class="delivery_recipient_title">Получатель</h2>
+                        <a class="delivery_recipient_data_mobile" href="#0">Новый получатель</a>
+                    </div>
+                        <h2 class="delivery_recipient_title_desktop">Получатель</h2>
+                        <div class="delivery_recipient_container">
+                            <div class="delivery_recipient_container_data">
+                                <div class="delivery_recipient_data">
+                                    <div class="delivery_recipient_data_label">
+                                        <label for="name-select">Имя и фамилия</label>
+                                        <select name="name" id="name-select">
+                                            <option value="wolfgang">Вольфганг Вениаминович Константинопольский</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <a class="delivery_recipient_container_data_desktop" href="#0">Новый получатель</a>
+                            </div>
+
+                            <div class="delivery_recipient_container_data">
+                                <div class="delivery_recipient_container_data_mobile">
+                                    <div class="delivery_recipient_data">
+                            
+                                        <div class="delivery_recipient_data_label">
+                                            <label for="name-select">Контактный телефон</label>
+                                            <select name="tel" id="tel-select">
+                                                <option value="wolfgang">+7 910 234-56-78</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <a class="#0">Новый телефон</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               <span class="main_border"></span>
+               <div class="basket">
+                   <h2>В заказе 4 товара<span>(2 кг)</span></h2>
+                    <div class="basket_info">
+                        <ul class="basket_info_list">
+                            <li class="basket_info_list_item">
+                                    <p>Цена товаров</p>
+                                    <p class="basket_info_list_item_number">29 456 ₽</p>
+                            </li>
+                            <li class="basket_info_list_item">
+                                    <p>Все скидки</p>
+                                    <p class="basket_info_list_item_number">–7 732 ₽</p>
+                            </li>
+                            <li class="basket_info_list_item">
+                                    <p>Скидка за предоплату</p>
+                                    <p class="basket_info_list_item_number">–3%</p>
+                            </li>
+                        </ul>
+                    </div>
+               </div>
+
+               <div class="order_summury_popup">
+                <h2>В заказе 4 товара<span>(2 кг)</span></h2>
+                <div class="order_summury_popup_info">
+                    <ul class="order_summury_popup_info_list">
+                        <li class="order_summury_popup_info_list_item">
+                                <p>Цена товаров</p>
+                                <p class="order_summury_popup_info_list_item_number">29 456 ₽</p>
+                        </li>
+                        <li class="order_summury_popup_info_list_item">
+                                <p>Все скидки</p>
+                                <p class="order_summury_popup_info_list_item_number">–7 732 ₽</p>
+                        </li>
+                        <li class="order_summury_popup_info_list_item">
+                                <p>Скидка за предоплату</p>
+                                <p class="order_summury_popup_info_list_item_number">–3%</p>
+                        </li>
+                    </ul>
+                    <div class="order_summury_popup_info_summury">
+                        <p>К оплате:</p>
+                        <p class="order_summury_popup_info_list_item_number">21 072 ₽</p>
+                    </div>
+                </div>
+                <footer class="order_summury_popup_close">
+                    <button class="order_summury_popup_close_button">
+                        Закрыть подробности
+                    </button>
+                </footer>
+               </div>
+        </main>
+        
+        <footer class="footer">
+            <div class="footer_container">
+                <div class="footer_container_mobile">
+                    <div class="footer_container_sum_mobile">
+                        <p>К оплате:</p>
+                        <p class="footer_container_sum_cost">21 072 ₽</p>
+                    </div> 
+                    <a class="footer_container_mobile_more-button" href="#0">Подробнее</a>      
+                </div>
+
+                <button class="footer_container_button" type="submit" name="submit">Оформить и оплатить</button>
+
+                <div class="footer_container_sum_desktop">
+                    <p>Итого к оплате на сайте:</p>
+                    <p class="footer_container_sum_cost">21 072 ₽</p>
+                </div>
+            </div>
+        </footer>
+
+    </form>
+    <script src="app/index.js"></script>
+</body>
+</html>
