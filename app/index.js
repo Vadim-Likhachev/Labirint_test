@@ -71,16 +71,20 @@ window.addEventListener('DOMContentLoaded', () => {
     const moreButton = document.querySelector('.footer_container_mobile_more-button');
     const closeButton = document.querySelector('.order_summury_popup_close_button');
     const popup = document.querySelector('.order_summury_popup');
+    const page = document.querySelector('.page');
+    
 
     moreButton.addEventListener('click', (e) => {
         e.preventDefault();
 
         popup.style.display = 'block';
+        page.style.display = 'none';
     });
 
     closeButton.addEventListener('click', (e) => {
         e.preventDefault();
 
+        page.style.display = 'block';
         popup.style.display = 'none';
     });
 
